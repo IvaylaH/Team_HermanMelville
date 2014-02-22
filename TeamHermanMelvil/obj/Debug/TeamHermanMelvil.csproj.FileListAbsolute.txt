@@ -1,0 +1,7 @@
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\bin\Debug\TeamHermanMelvil.exe.config
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\obj\Debug\TeamHermanMelvil.csprojResolveAssemblyReference.cache
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\bin\Debug\TeamHermanMelvil.exe
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\bin\Debug\TeamHermanMelvil.pdb
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\obj\Debug\TeamHermanMelvil.exe
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\obj\Debug\TeamHermanMelvil.pdb
+c:\users\ivayla\documents\visual studio 2013\Projects\TeamHermanMelvil\TeamHermanMelvil\bin\Debug\Data\Maps\scene1.txt
