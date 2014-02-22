@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeamHermanMelvil.Characters;
 
 namespace TeamHermanMelvil.Items
 {
-    interface IWeapons
+    public class Sword : Weapon
     {
-        void Fire(Character characte);
+
     }
 }

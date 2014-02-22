@@ -11,10 +11,10 @@ namespace TeamHermanMelvil.Worlds
         public int x;
         public int y;
 
-        public Position(int x, int y)
+        public Position(int inX, int inY)
         {
-            this.x = x;
-            this.y = y;
+            x = inX;
+            y = inY;
         }
     }
 }

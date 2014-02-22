@@ -9,11 +9,14 @@ namespace TeamHermanMelvil.Worlds
     public class BaseObject : IObject
     {
         private Position position;
+        protected ObjectType type;
 
         public BaseObject(Position position)
         {
             this.Position = position;
         }
+
+        public ObjectType Type {get { return this.type; } }
 
         public Position Position
         {
@@ -21,7 +24,7 @@ namespace TeamHermanMelvil.Worlds
             {
                 return this.position;
             }
-            protected set
+            set
             {
                 this.position = value;
             }
@@ -33,15 +36,23 @@ namespace TeamHermanMelvil.Worlds
             protected set;
         }
 
+        public enum ObjectType
+        {
+            Character,
+            Obstacle,
+            Item
+        }
+    
+
         public void Draw(Position top)
         {
             this.Draw(top, this.Vision);
         }
 
-        public void Draw(Position top, Position position)
+        public void Draw(Position top, Position newPosition)
         {
             this.Draw(top, ' ');
-            this.Position = position;
+            this.Position = newPosition;
             this.Draw(top, this.Vision);
         }
 
@@ -50,7 +61,7 @@ namespace TeamHermanMelvil.Worlds
             if (((top.x <= this.Position.x) && (top.x + 79 > this.Position.x)) && (((top.y <= this.Position.y) && (top.y + 24 > this.Position.y))))
             {
                 Console.SetCursorPosition(this.Position.x, this.Position.y);
-                Console.WriteLine(vision);
+                Console.Write(vision);
             }
         }
     }

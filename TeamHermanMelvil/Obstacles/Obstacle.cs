@@ -12,7 +12,7 @@ namespace TeamHermanMelvil.Obstacles
         public Obstacle(Position position)
             : base(position)
         {
-   
+            type = ObjectType.Obstacle;
         }
 
         public void Show(Position top)

@@ -13,6 +13,7 @@ namespace TeamHermanMelvil
         {
             World myWorld = new World();
             myWorld.Draw();
+            myWorld.Play();
         }
     }
 }

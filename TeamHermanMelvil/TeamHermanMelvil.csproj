@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\IEnemy.cs" />
     <Compile Include="Characters\ICharacter.cs" />
     <Compile Include="Characters\IPlayer.cs" />
@@ -48,6 +49,8 @@
     <Compile Include="Items\IArmour.cs" />
     <Compile Include="Items\IItem.cs" />
     <Compile Include="Items\IWeapons.cs" />
+    <Compile Include="Items\Sword.cs" />
+    <Compile Include="Items\Weapon.cs" />
     <Compile Include="Obstacles\IObstacle.cs" />
     <Compile Include="Obstacles\Obstacle.cs" />
     <Compile Include="Obstacles\Wall.cs" />

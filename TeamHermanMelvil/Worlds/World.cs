@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using TeamHermanMelvil.Obstacles;
+using TeamHermanMelvil.Characters;
+using System.Threading;
 
 namespace TeamHermanMelvil.Worlds
 {
@@ -12,6 +14,9 @@ namespace TeamHermanMelvil.Worlds
     {
         Position top = new Position(1, 1);
         List<Obstacle> obstacles = new List<Obstacle>();
+        List<BaseObject> objects = new List<BaseObject>();
+        //TODO: да се позиционира в средата на полетао, като се направи проверка дали е възможно да седи в средата
+        Player player = new Player(new Position(3, 3));
 
         public World()
         {
@@ -33,7 +38,9 @@ namespace TeamHermanMelvil.Worlds
                     {
                         if (c.Equals('#'))
                         {
-                            obstacles.Add(new Wall(new Position(x, y)));
+                            Wall wall = new Wall(new Position(x, y));
+                            obstacles.Add(wall);
+                            objects.Add(wall);
                         }
                         x++;
                     }
@@ -50,6 +57,17 @@ namespace TeamHermanMelvil.Worlds
                 obstacle.Draw(this.top);
             }
             Console.WriteLine("");
+        }
+
+        public void Play()
+        {
+            player.Draw(top);
+            while (true)
+            {
+                player.Move(objects, top);
+
+                Thread.Sleep(100);
+            }
         }
     }
 }
