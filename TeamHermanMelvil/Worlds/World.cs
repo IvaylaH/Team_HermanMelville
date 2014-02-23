@@ -15,12 +15,15 @@ namespace TeamHermanMelvil.Worlds
         Position top = new Position(1, 1);
         List<Obstacle> obstacles = new List<Obstacle>();
         List<BaseObject> objects = new List<BaseObject>();
-        //TODO: да се позиционира в средата на полетао, като се направи проверка дали е възможно да седи в средата
+        //TODO: да се позиционира в средата на полето, като се направи проверка дали е възможно да седи в средата
         Player player = new Player(new Position(3, 3));
+        IEnumerable<Enemy> enemies = new List<Enemy>(); //!!
 
         public World()
         {
             this.InitializeMap("scene1.txt");
+            enemies = Enemy.CreateEnemies(objects);
+            //Инициализация на противниците
         }
 
         public void InitializeMap(string sceneName)
@@ -56,15 +59,28 @@ namespace TeamHermanMelvil.Worlds
             {
                 obstacle.Draw(this.top);
             }
-            Console.WriteLine("");
+            Console.WriteLine("");  // why do we have it here?
+
+            foreach (var enemy in enemies)
+            {
+                enemy.Draw(this.top);
+            }
         }
+
+     /*   public void Draw(IEnumerable<Enemy> enemies)
+        {
+           
+        }*/
+
 
         public void Play()
         {
             player.Draw(top);
+            //Изчертаване на противниците
             while (true)
             {
                 player.Move(objects, top);
+                //Цикъл, за преместване на противниците
 
                 Thread.Sleep(100);
             }

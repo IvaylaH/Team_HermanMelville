@@ -52,7 +52,7 @@ namespace TeamHermanMelvil.Characters
                             this.Draw(top, new Position(this.Position.x + 1, this.Position.y));
                         }
                         break;
-                    case ConsoleKey.Spacebar:
+                    case ConsoleKey.Spacebar: // to implement attack
                         break;
                     case ConsoleKey.Q:
                         Environment.Exit(0);

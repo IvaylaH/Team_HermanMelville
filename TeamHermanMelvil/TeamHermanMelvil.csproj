@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Enemy.cs" />
     <Compile Include="Characters\IEnemy.cs" />
     <Compile Include="Characters\ICharacter.cs" />
     <Compile Include="Characters\IPlayer.cs" />
@@ -63,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Maps\scene1.txt">

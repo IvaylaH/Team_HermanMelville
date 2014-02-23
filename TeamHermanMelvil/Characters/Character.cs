@@ -13,6 +13,7 @@ namespace TeamHermanMelvil.Characters
     {
         protected Weapon weapon;
         protected int life;
+        protected bool isAlive; // either here or in class enemy
 
         public Character(Position position)
             : base(position)
